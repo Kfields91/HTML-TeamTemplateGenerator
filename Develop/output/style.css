@@ -1,0 +1,15 @@
+div.col-12.jumbotron.mb-3.team-heading {
+  background-color: red;
+  color: white;
+}
+div.card {
+  margin: 10px;
+  box-shadow: 4px 3px 8px 1px slategray;
+}
+div h2,
+div h3 {
+  text-align: center;
+}
+div.card-header {
+  background-color: steelblue;
+}
