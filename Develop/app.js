@@ -44,36 +44,111 @@ function createManager(){
             const manager = new Manager(data.name, data.id, data.email, data.officeNumber);
             teamMembers.push(manager);
             createTeam();
-        });
-    }
-
-function createTeam(){
-    inquirer.prompt([
-    { 
-        // Takes user input via checkbox using spacebar to add choice and up and down keys to move down list
-          type: "checkbox",
+            // console.log(teamMembers);
+          });
+          // fs.writeFile(outputPath, render({...teamMembers}));
+        }
+        
+        
+        function createTeam(){
+          inquirer.prompt([
+            { 
+              // Takes user input via checkbox using spacebar to add choice and up and down keys to move down list
+              type: "checkbox",
           message: "Choose Which Kind Of TeamMember You'd Like To Add",
           name: "teamMembers",
           choices: [
-              "Engineer",
-              "Intern",
-              "none"
-            ]
+            "Engineer",
+            "Intern",
+            "none"
+          ]
         }
+      ]).then(function(data){
+        if (data.teamMembers[0] === 'Engineer') {
+          createEngineer();
+          // block of code to be executed if condition1 is true
+        } else if (data.teamMembers[0] === 'Intern') {
+          createIntern();
+          // block of code to be executed if the condition1 is false and condition2 is true
+        } else {
+          // block of code to be executed if the condition1 is false and condition2 is false
+          return console.log("rendering HTML...");
+        }
+      });
+              fs.writeFile(outputPath, render(teamMembers), (err) => {
+                if (err) throw err;
+              }
+              );
+    // console.log(teamMembers);
+    
+    
+    function createEngineer(){
+      inquirer.prompt([
+        {
+          // Takes user text input
+          type: "input",
+          name: "name",
+          message: "Enter Engineer's Name"
+        },
+    {
+      // Takes user text input
+      type: "input",
+      name: "id",
+      message: "Enter Engineer's Id"
+    },
+    {
+      // Takes user text input
+      type: "input",
+      name: "email",
+      message: "Enter Engineer's Email"
+    },
+    {
+      // Takes user text input
+      type: "input",
+      name: "github",
+        message: "Enter Engineers's github profile"
+      }
     ]).then(function(data){
-        if(data.teamMembers === "Engineer"){
-            createEngineer();
-        }
-        if(data.teamMembers === "Intern"){
-            createIntern();
-        }
-        if(data.teamMembers === "none"){
-            console.log("none chosen");
-        }
-    });
-// push
+        const engineer = new Engineer(data.name, data.id, data.email, data.github);
+        teamMembers.push(engineer);
+        createTeam();
+      });
 }
 
+function createIntern(){
+  inquirer.prompt([
+    {
+      // Takes user text input
+      type: "input",
+      name: "name",
+      message: "Enter Intern's Name"
+    },
+    {
+      // Takes user text input
+      type: "input",
+      name: "id",
+      message: "Enter Intern's Id"
+    },
+    {
+      // Takes user text input
+      type: "input",
+      name: "email",
+      message: "Enter Interns's Email"
+    },
+      {
+        // Takes user text input
+        type: "input",
+        name: "github",
+        message: "Enter Intern's School"
+      }
+    ]).then(function(data){
+      const intern = new Intern(data.name, data.id, data.email, data.school);
+      teamMembers.push(intern);
+      createTeam();
+    });
+}
+}
+// render(teamMembers);
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
