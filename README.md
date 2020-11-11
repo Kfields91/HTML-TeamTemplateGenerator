@@ -92,3 +92,7 @@ If you would like to contribute to this project reach out to me. Contact Informa
 
 [Github Profile](https://github.com/Kfields91)
 kelsea.fields@yahoo.com
+
+[Github Repo](https://github.com/Kfields91/HTML-TeamTemplateGenerator)
+
+[Github Live Page](https://kfields91.github.io/HTML-TeamTemplateGenerator/)
