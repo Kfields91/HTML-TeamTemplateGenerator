@@ -138,7 +138,7 @@ function createIntern(){
       {
         // Takes user text input
         type: "input",
-        name: "github",
+        name: "school",
         message: "Enter Intern's School"
       }
     ]).then(function(data){
