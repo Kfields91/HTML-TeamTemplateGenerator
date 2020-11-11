@@ -2,7 +2,7 @@
 
 ---
 
-<a href="https://img.shields.io/badge/JavaScipt-69%25-yellow"><img alt="JavaScript use" src="https://img.shields.io/badge/JavaScipt-69%25-yellow"></a> <a href="https://img.shields.io/badge/Used-Node.js-red"><img alt="Node.js use" src="https://img.shields.io/badge/Used-Node.js-red"></a> <a href="https://img.shields.io/badge/npm-Inquirer-orange"><img alt="npm package Inquirer" src="https://img.shields.io/badge/npm-Inquirer-orange"></a>
+<a href="https://img.shields.io/badge/JavaScipt-69.6%25-yellow"><img alt="JavaScript use" src="https://img.shields.io/badge/JavaScipt-69.6%25-yellow"></a> <a href="https://img.shields.io/badge/HTML-29.1%25-green"><img alt="html badge" src="https://img.shields.io/badge/HTML-29.1%25-green"><a href="https://img.shields.io/badge/CSS-1.3%25-yellow"><img alt="CSS badge" src="https://img.shields.io/badge/CSS-1.3%25-yellow"><a href="https://img.shields.io/badge/Used-Node.js-red"><img alt="Node.js use" src="https://img.shields.io/badge/Used-Node.js-red"></a> <a href="https://img.shields.io/badge/npm-Inquirer-orange"><img alt="npm package Inquirer" src="https://img.shields.io/badge/npm-Inquirer-orange"></a><a href="https://img.shields.io/badge/npm-Inquirer-blue"><img alt="npm package Jest" src="https://img.shields.io/badge/npm-Jest-blue"></a>
 
 ## Table of Contents
 
@@ -15,6 +15,8 @@
 - [Contact Information](#contact-information)
 
 ### Description
+
+![htmlTemplateScreenshot](https://user-images.githubusercontent.com/68616301/98751045-2f334600-2374-11eb-9ea0-a26e897bbd2b.png)
 
 This HTML template generator quickly takes in user information to generate an HTML file for your whole engineering team. There is a place for Manager, Engineer, and Intern. You can add as many employees as you need!
 
@@ -76,11 +78,11 @@ Clicking the "None" option will end the prompt and your HTML page will generate 
 
 ### Contribution
 
-contact me
+If you would like to contribute to this project reach out to me. Contact Information can be found below or by clicking on the 'Contact-Information' link provided in the Table of Contents.
 
 ### Test-Instructions
 
-npm run test
+`npm run test`
 
 ### License
 
